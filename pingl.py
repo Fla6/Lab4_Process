@@ -2,13 +2,16 @@ import os,time
 from multiprocessing import Process
 
 def ipping (ip):
-    os.system('ping -c 2 {}'.format(ip))
     proc = os.getpid()
-    print('Process id: {}'.format(proc), "\n")
+    print("\n", 'Process id: {}'.format(proc), "\n")
+    os.system('ping -c 2 {}'.format(ip))
+    
 
 if __name__ == "__main__":
-    ip = ["127.0.0.1", "ya.ru", "173.194.73.101"]
-    #ip = input('Write IP: ')
+    #ip = ["127.0.0.1", "ya.ru", "173.194.73.101"]
+    ip = []
+    ipip = input('Write IP: ')
+    ip.append(ipip)
     procs = []
 
     for index, ip in enumerate(ip):
