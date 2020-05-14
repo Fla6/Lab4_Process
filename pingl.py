@@ -4,11 +4,10 @@ from multiprocessing import Process
 def ipping (ip):
     proc = os.getpid()
     print("\n", 'Process id: {}'.format(proc), "\n")
-    os.system('ping -c 2 {}'.format(ip))
+    os.system('nmap -sP {}'.format(ip))
     
 
 if __name__ == "__main__":
-    #ip = ["127.0.0.1", "ya.ru", "173.194.73.101"]
     ip = []
     ipip = input('Write IP: ')
     ip.append(ipip)
@@ -22,4 +21,3 @@ if __name__ == "__main__":
 
     for proc in procs:
         proc.join()
-    #ipping(ip)

@@ -5,7 +5,7 @@ using namespace std;
 
 void ping(const char host[BUFF_LEN])
 {   
-    string ping = "ping -c 2 ";
+    string ping = "nmap -sP ";
     ping.append(host);
     system(ping.c_str());  
 }

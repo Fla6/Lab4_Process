@@ -18,9 +18,11 @@ int main()
         exit(1);
     
     case 0:
-        cout << "Child\n";
+        cout << "Child\n" << endl;
+        sleep(1);
+        cout << "Process id: " << getpid() << endl << endl;
         ping(host);
-        cout << "Child done\n";
+        cout << endl << "Child done\n";
         exit(0);
 
     default:

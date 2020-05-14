@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
     ifstream fout;
-    fout.open("input.txt");
+    fout.open("input2.txt");
     char host[BUFF_LEN] = { 0, };
     pid_t pid;
     while (!fout.eof())
@@ -21,9 +21,11 @@ int main()
             exit(1);
             
         case 0:
-            cout << "Child\n";
+            cout << "Child\n" << endl;
+            sleep(1);
+            cout << "Process id: " << getpid() << endl << endl;
             ping(host);
-            cout << "Child done\n";
+            cout << endl << "Child done\n";
             exit(0);
 
         default:
