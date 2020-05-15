@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     for index, ip in enumerate(ip):
         proc = Process(target=ipping, args=(ip,))
-        time.sleep(2)
+        #time.sleep(2)
         procs.append(proc)
         proc.start()
 

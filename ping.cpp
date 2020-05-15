@@ -19,7 +19,7 @@ int main()
     
     case 0:
         cout << "Child\n" << endl;
-        sleep(1);
+        //sleep(1);
         cout << "Process id: " << getpid() << endl << endl;
         ping(host);
         cout << endl << "Child done\n";
